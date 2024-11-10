@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Management System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Section -->
+        <div id="loginSection" class="section active">
+            <div class="login-container">
+                <h2>LMS Login</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="section">
+            <header>
+                <h1>Learning Management System</h1>
+                <nav>
+                    <button class="nav-btn active" data-tab="courses">My Courses</button>
+                    <button class="nav-btn" data-tab="available">Available Courses</button>
+                    <button class="nav-btn" data-tab="progress">Progress</button>
+                    <button class="nav-btn" data-tab="forums">Forums</button>
+                    <button id="logoutBtn">Logout</button>
+                </nav>
+            </header>
+
+            <!-- Courses Tab -->
+            <div id="coursesTab" class="tab-content active">
+                <h2>My Enrolled Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <h3>Java Programming 101</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%">75%</div>
+                        </div>
+                        <button class="btn-primary">Continue Learning</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Web Development Basics</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%">45%</div>
+                        </div>
+                        <button class="btn-primary">Continue Learning</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Available Courses Tab -->
+            <div id="availableTab" class="tab-content">
+                <h2>Available Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <h3>Advanced Java</h3>
+                        <p>Instructor: John Doe</p>
+                        <p>Duration: 8 weeks</p>
+                        <p>Price: $99</p>
+                        <button class="btn-primary">Enroll Now</button>
+                    </div>
+                    <div class="course-card">
+                        <h3>Python Basics</h3>
+                        <p>Instructor: Jane Smith</p>
+                        <p>Duration: 6 weeks</p>
+                        <p>Price: $79</p>
+                        <button class="btn-primary">Enroll Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Progress Tab -->
+            <div id="progressTab" class="tab-content">
+                <h2>My Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <h3>Java Programming 101</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%">75%</div>
+                        </div>
+                        <p>Completed Modules: 6/8</p>
+                    </div>
+                    <div class="progress-item">
+                        <h3>Web Development Basics</h3>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%">45%</div>
+                        </div>
+                        <p>Completed Modules: 3/7</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forums Tab -->
+            <div id="forumsTab" class="tab-content">
+                <h2>Discussion Forums</h2>
+                <div class="forums-container">
+                    <div class="forum-list">
+                        <div class="forum-item">
+                            <h3>General Discussion</h3>
+                            <p>15 new posts</p>
+                        </div>
+                        <div class="forum-item">
+                            <h3>Technical Support</h3>
+                            <p>8 new posts</p>
+                        </div>
+                        <div class="forum-item">
+                            <h3>Course Questions</h3>
+                            <p>23 new posts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
